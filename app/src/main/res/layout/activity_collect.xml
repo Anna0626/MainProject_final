@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FCF9F5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <include  layout="@layout/toolbar"/>
+
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/selectback"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/collectbtn1"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:backgroundTint="#EAD1BB"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="모아보기"
+                android:textColor="#424242"
+                android:textStyle="bold"
+                app:backgroundTint="#00FFFFFF"
+                tools:ignore="TouchTargetSizeCheck"
+                android:fontFamily="@font/omyu_pretty" />
+
+            <Button
+                android:id="@+id/collectbtn2"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="자세히 보기"
+                android:textColor="#424242"
+                android:textStyle="bold"
+                app:backgroundTint="#E9D0BA"
+                tools:ignore="TouchTargetSizeCheck"
+                android:fontFamily="@font/omyu_pretty" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="330dp"
+            android:layout_height="691dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+
+    </LinearLayout>
+    <include
+        layout="@layout/bottombar"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
